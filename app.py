@@ -250,7 +250,7 @@ with tab1:
                                 </div>
                                 <div style="font-size:0.83rem; color:#94a3b8; margin-top:4px;">{ind['description']}</div>
                             </div>
-                            """, unsafe_allow_mode=True)
+                            """, unsafe_allow_html=True)
                     else:
                         st.info("No suspicious caution indicators detected.")
 
@@ -259,7 +259,7 @@ with tab1:
                     for g in analysis["safety_guidance"]:
                         st.caption(f"• {g}")
 
-                    st.markdown(f"<div style='font-size:0.72rem; color:#64748b; margin-top:10px;'>{analysis['disclaimer']}</div>", unsafe_allow_mode=True)
+                    st.markdown(f"<div style='font-size:0.72rem; color:#64748b; margin-top:10px;'>{analysis['disclaimer']}</div>", unsafe_allow_html=True)
         else:
             st.info("Enter or select an SMS message on the left to inspect prediction confidence and explainable indicators.")
 
@@ -274,7 +274,7 @@ with tab2:
             <h4 style="color: #94a3b8;">No messages analyzed yet.</h4>
             <p style="color: #64748b; font-size: 0.9rem;">Run messages through the scanner tab to populate telemetry.</p>
         </div>
-        """, unsafe_allow_mode=True)
+        """, unsafe_allow_html=True)
     else:
         col_d1, col_d2, col_d3, col_d4 = st.columns(4)
         col_d1.metric("Total Analyzed", stats["total_analyzed"])
