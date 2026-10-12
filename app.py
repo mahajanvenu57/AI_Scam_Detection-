@@ -86,7 +86,7 @@ st.markdown("""
         margin-bottom: 0.5rem;
     }
 </style>
-""", unsafe_allow_mode=True)
+""", unsafe_allow_html=True)
 
 @st.cache_resource
 def load_artifacts():
@@ -137,8 +137,8 @@ else:
 
 # Header
 st.markdown('<div class="badge-cyber">SCAMSHIELD AI</div><div class="badge-cyber">MCARP31 • RESEARCH PROJECT</div>', unsafe_allow_mode=True)
-st.markdown('<div class="main-title">SCAMSHIELD AI</div>', unsafe_allow_mode=True)
-st.markdown('<div class="sub-title">AI-Based SMS Scam Detection & Risk Analysis</div>', unsafe_allow_mode=True)
+st.markdown('<div class="main-title">SCAMSHIELD AI</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-title">AI-Based SMS Scam Detection & Risk Analysis</div>', unsafe_allow_html=True)
 
 # Tabs
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
@@ -223,14 +223,14 @@ with tab1:
                             <h4 style="color: #f43f5e; margin:0;"><i class="fas fa-triangle-exclamation"></i> POTENTIAL SPAM / SCAM</h4>
                             <small style="color: #cbd5e1;">Identified as fraudulent, smishing, or malicious communication.</small>
                         </div>
-                        """, unsafe_allow_mode=True)
+                        """, unsafe_allow_html=True)
                     else:
                         st.markdown(f"""
                         <div class="safe-banner">
                             <h4 style="color: #34d399; margin:0;"><i class="fas fa-circle-check"></i> LIKELY SAFE (HAM)</h4>
                             <small style="color: #cbd5e1;">No malicious or coercive smishing indicators detected.</small>
                         </div>
-                        """, unsafe_allow_mode=True)
+                        """, unsafe_allow_html=True)
 
                     # Metrics
                     c1, c2, c3 = st.columns(3)
