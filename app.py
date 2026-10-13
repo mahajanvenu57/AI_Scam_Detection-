@@ -136,7 +136,7 @@ else:
     st.sidebar.warning("⚠️ Run `python train_models.py` to compile models.")
 
 # Header
-st.markdown('<div class="badge-cyber">SCAMSHIELD AI</div><div class="badge-cyber">MCARP31 • RESEARCH PROJECT</div>', unsafe_allow_mode=True)
+st.markdown('<div class="badge-cyber">SCAMSHIELD AI</div><div class="badge-cyber">MCARP31 • RESEARCH PROJECT</div>', unsafe_allow_html=True)
 st.markdown('<div class="main-title">SCAMSHIELD AI</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">AI-Based SMS Scam Detection & Risk Analysis</div>', unsafe_allow_html=True)
 
